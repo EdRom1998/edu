@@ -1,4 +1,5 @@
 FROM ubuntu:20.04
+ENV CATALINA_BASE=/etc/tomcat9
 RUN apt update
 RUN apt install tomcat9 -y
 RUN apt install maven -y
