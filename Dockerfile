@@ -8,3 +8,4 @@ WORKDIR /tmp/JenkinsWar
 RUN mvn package
 RUN cp target/*.war /var/lib/tomcat9/webapps/JenkinsWar.war
 EXPOSE 8080
+CMD ["/usr/share/tomcat9/bin/catalina.sh", "run"]
