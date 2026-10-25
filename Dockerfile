@@ -13,4 +13,5 @@ RUN mvn package
 RUN cp target/*.war /var/lib/tomcat9/webapps/JenkinsWar.war
 RUN chown tomcat:tomcat /var/lib/tomcat9/webapps/JenkinsWar.war
 EXPOSE 8080
+EXPOSE 80
 CMD ["/usr/share/tomcat9/bin/catalina.sh", "run"]
