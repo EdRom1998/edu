@@ -10,6 +10,7 @@ RUN apt install git -y
 RUN git clone https://github.com/sivajavatechie/JenkinsWar.git /tmp/JenkinsWar
 WORKDIR /tmp/JenkinsWar
 RUN mvn package
+RUN rm -rf /var/lib/tomcat9/webapps/*
 RUN cp target/*.war /var/lib/tomcat9/webapps/JenkinsWar.war
 RUN chown tomcat:tomcat /var/lib/tomcat9/webapps/JenkinsWar.war
 EXPOSE 8080
